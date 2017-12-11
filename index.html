@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Trivia</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="center-align">Christmas Trivia</h1>
+    </header>
+
+    <div class="container">
+        <!-- Register Team -->
+        <div class="row trivia_signup_wrapper">
+            <form class="col s12" id="sign_up" action="/api/login" method="post">
+                <div class="card-panel teal z-depth-3">
+                    <div class="row">
+                        <div class="input-field col s12 white-text">
+                            <input placeholder="Team Name" id="team_name" type="text" class="validate">
+                            <label for="team_name">Team Name</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-large waves-effect waves-light" title="Click to sign up.">Sign up</button>
+                </div>
+            </form>
+            <div class="col s10 offset-s1">
+                <a href="javascript:displayLogin();">Have an account? Log in</a>.
+
+            </div>
+        </div>
+
+        <!-- Login -->
+        <div class="row trivia_login_wrapper">
+            <form class="col s12" id="login" action="/api/signup" method="post">
+                <div class="card-panel teal z-depth-3">
+                    <div class="row">
+                        <div class="input-field col s12 white-text">
+                            <input placeholder="Email" id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 white-text">
+                            <input placeholder="Password" id="password" type="text" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-large waves-effect waves-light" title="Click to login.">Login</button>
+                </div>
+            </form>
+            <div class="col s10 offset-s1">
+                <a href="javascript:displaySingup();">Create a team? Log in</a>.
+
+            </div>
+        </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="javascript/materialize.min.js"></script>
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>
